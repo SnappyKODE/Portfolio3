@@ -31,21 +31,35 @@ const BgAmin = () => {
         arr.push(<div className='colorBox' key={i}></div>)
     }
 
+
+    const [page, setPage] = useState("H")
+
+    const handlePage = (v)=>{
+        setPage(v)
+    }
+
     return (
-        <Router>
-            <Navbar />
+        <div>
+            <Navbar handlePage={handlePage} />
             <div className="bgAnimation" id="bgAnimation">
                 {arr}
                 <div className="backgroundAmim"></div>
             </div>
-            <Routes>
+
+            {
+                page == "H" ? <NameAnim /> : 
+                page == "S" ? <Skill/> : 
+                page == "P" ? <Projects /> : 
+                page == "C" ? <Contact /> : <></>
+            }
+            {/* <Routes>
                 <Route path="/" element={<NameAnim />}></Route>
                 <Route path="/skill/*" element={<Skill />}></Route>
                 <Route path="/project" element={<Projects/>}></Route>
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
-            </Routes>
-        </Router>
+            </Routes> */}
+        </div>
     )
 }
 

@@ -4,25 +4,32 @@ import { NavLink } from 'react-router-dom'
 
 
 
-const Navbar = () => {
+const Navbar = ({handlePage}) => {
+
+  const [page, setPage]= useState("H")
+
+  const handelClick = (v)=>{
+    handlePage(v)
+    setPage(v)
+  }
 
   return (
     <div className='navbar'>
         <nav>
             <div className="nav-item">
-              <NavLink className="a"  to="/" activeclassname="active">Home</NavLink>
+              <a className={page == "H" ? "active a" : "a"}  activeclassname="active" onClick={()=>{handelClick("H")}}>Home</a>
             </div>
             <div className="nav-item">
-              <NavLink className="a" to="/skill" activeclassname="active">Skill</NavLink>
+              <a className={page == "S" ? "active a" : "a"}  activeclassname="active"  onClick={()=>{handelClick("S")}}>Skill</a>
             </div>
             <div className="nav-item">
-              <NavLink className='a' to="/project" activeclassname="active">Project</NavLink>
+              <a className={page == "P" ? "active a" : "a"}  activeclassname="active"  onClick={()=>{handelClick("P")}}>Project</a>
             </div>
             {/* <div className="nav-item">
               <NavLink className='a' to="/about" activeclassname="active">About</NavLink>
             </div> */}
             <div className="nav-item">
-              <NavLink className='a' to="/contact" activeclassname="active">Contact</NavLink>
+              <a className={page == "C" ? "active a" : "a"}  activeclassname="active"  onClick={()=>{handelClick("C")}}>Contact</a>
             </div>
         </nav>
     </div>
