@@ -16,10 +16,10 @@ const Contact = () => {
     setIsSubmitting(true);
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+       "service_r9cygwq",
+        "template_t412cpl",
         e.target,
-        process.env.REACT_APP_PUBLIC_KEY
+        "HF1b9PagRseFQUEU5"
       )
       .then(
         (result) => {
