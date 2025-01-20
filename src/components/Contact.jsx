@@ -16,7 +16,11 @@ const Contact = () => {
     setIsSubmitting(true);
     emailjs
       .sendForm(
+<<<<<<< HEAD
         "service_r9cygwq",
+=======
+       "service_r9cygwq",
+>>>>>>> e3b4a6c9f64519f34afa5883e7f68a214f2a6e5a
         "template_t412cpl",
         e.target,
         "HF1b9PagRseFQUEU5"
