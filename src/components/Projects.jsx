@@ -35,13 +35,13 @@ const Projects = () => {
 
       <div className="card">
       {width > 600 && <div className="card-image app"><img src={img7} alt="" style={{width:100,height:100 }}/></div>}
-        <p className="card-title">InstaChat     v1.1.1</p>
+        <p className="card-title">InstaChat     v_1.1.1</p>
         {/* <p className="card-body">
           Nullam ac tristique nulla, at convallis quam. Integer consectetur mi nec magna tristique, non lobortis.
         </p> */}
         <div className="btn-group">
           <a href="https://github.com/SnappyKODE/InstaChat_APP" target="_blank">Code</a>
-          <a onClick={handleDownload} target="_blank">Download</a>
+          <a onClick={handleDownload} target="_blank">Download </a>
         </div>
       </div>
 
